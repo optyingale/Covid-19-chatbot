@@ -66,6 +66,7 @@ class EmailSender:
             # storing the senders email address
             self.msg['From'] = self.configuration['SENDER_EMAIL']
 
+            self.msg['To'] = self.configuration['SALES_TEAM_EMAIL']
 
             # storing the subject
             self.msg['Subject'] = self.configuration['SALES_TEAM_EMAIL_SUBJECT']
