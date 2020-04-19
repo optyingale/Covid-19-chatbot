@@ -18,10 +18,13 @@ class TemplateReader:
         try:
             if topic_selected == 'India':
                 data = json.loads(r1.content)
-                df = (pd.DataFrame(data['statewise'])[['state', 'active', 'confirmed', 'deaths', 'recovered', 'lastupdatedtime']]
-                      .set_index('state'))
-                df['recovery_rate'] = df['recovered'].apply(int) / (
+                df = (pd.DataFrame(data['statewise'])[['state', 'active', 'confirmed', 'deaths',
+                                                       'recovered', 'lastupdatedtime']].set_index('state'))
+                self.list_of_columns = ['active', 'confirmed', 'deaths', 'recovered',
+                                        'lastupdatedtime', 'recovery_rate (in percentage)']
+                df['recovery_rate (in percentage)'] = df['recovered'].apply(int) / (
                             df['deaths'].apply(int) + df['recovered'].apply(int))
+                df['recovery_rate (in percentage)'] = df['recovery_rate (in percentage)']*100
 
             elif topic_selected == 'Worldwide':
                 # World DataFrame
@@ -29,8 +32,8 @@ class TemplateReader:
                 table = soup.find(name="table")
                 df = pd.read_html(str(table))[0]
                 self.list_of_columns = ['Country,Other', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths',
-                                   'TotalRecovered', 'ActiveCases', 'Serious,Critical', 'Recovery_Rate']
-                df['Recovery_Rate'] = df['TotalRecovered'] / (df['TotalDeaths'] + df['TotalRecovered'])
+                                        'TotalRecovered', 'ActiveCases', 'Serious,Critical', 'Recovery_Rate (in percentage)']
+                df['Recovery_Rate (in percentage)'] = df['TotalRecovered'] / (df['TotalDeaths'] + df['TotalRecovered'])
             return df[self.list_of_columns].fillna(0)
 
         except Exception as e:

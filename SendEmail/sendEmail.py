@@ -4,6 +4,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from config_reader import ConfigReader
+# import email_templates
 
 
 class EmailSender:
@@ -28,9 +29,12 @@ class EmailSender:
             # converting DataFrame to HTML in body
             # body = "This will contain attachment"
             body = message.to_html()
+            body1 = "Source for World data : https://www.worldometers.info/coronavirus/" \
+                    "Source for India data : https://api.covid19india.org/data.json"
 
             # attach the body with the msg instance
             self.msg.attach(MIMEText(body, 'html'))
+            self.msg.attach(MIMEText(body1, 'plain'))
 
             # instance of MIMEBase and named as p
             self.p = MIMEBase('application', 'octet-stream')
@@ -55,7 +59,7 @@ class EmailSender:
         except Exception as e:
             print('the exception is '+str(e))
 
-    def send_email_to_support(self, cust_name, cust_email, cust_pincode, cust_contact, topic_selected, body):
+    def send_email_to_support(self, cust_name, cust_email, cust_pincode, cust_contact, topic_selected, message):
         try:
             self.config_reader = ConfigReader()
             self.configuration = self.config_reader.read_config()
@@ -73,6 +77,8 @@ class EmailSender:
 
             # string to store the body of the mail
             # body = "This will contain attachment"
+
+            body = message
 
             body = body.replace('cust_name',cust_name)
             body = body.replace('cust_contact', cust_contact)
