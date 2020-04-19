@@ -28,10 +28,10 @@ class TemplateReader:
                 soup = BeautifulSoup(r.content, 'lxml')
                 table = soup.find(name="table")
                 df = pd.read_html(str(table))[0]
-                list_of_columns = ['Country,Other', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths',
+                self.list_of_columns = ['Country,Other', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths',
                                    'TotalRecovered', 'ActiveCases', 'Serious,Critical', 'Recovery_Rate']
                 df['Recovery_Rate'] = df['TotalRecovered'] / (df['TotalDeaths'] + df['TotalRecovered'])
-            return df[list_of_columns].fillna(0)
+            return df[self.list_of_columns].fillna(0)
 
         except Exception as e:
             print('The exception is '+str(e))

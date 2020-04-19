@@ -64,7 +64,9 @@ def processRequest(req):
         email_sender.send_email_to_support(cust_name=cust_name, cust_contact=cust_contact, cust_pincode=cust_pincode,
                                            cust_email=cust_email, topic_selected=topic_selected,
                                            body=email_message_support)
-        fulfillmentText = "Thank you for your interest\nDo you have any further queries?"
+        fulfillmentText = "Thank you for your interest" \
+                          "You will shortly receive a mail with the details" \
+                          "Do you have any queries regarding coronavirus or COVID-19 ?"
         log.write_log(sessionID, "Bot Says: "+fulfillmentText)
         return {
             "fulfillmentText": fulfillmentText
