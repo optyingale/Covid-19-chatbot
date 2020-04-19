@@ -47,9 +47,9 @@ def processRequest(req):
     cust_name = parameters.get("cust_name")                   # Customer name
     #print(cust_name)
     cust_contact = parameters.get("cust_mob")                 # Customer Contact
-    cust_email= parameters.get("cust_email")                  # Customer Email
+    cust_email = parameters.get("cust_email")                 # Customer Email
     cust_pincode = parameters.get("cust_pincode")             # Customer Pincode
-    topic_selected = parameters.get("topic_selected")            # Topic Selected
+    topic_selected = parameters.get("topic_selected")         # Topic Selected
 
     intent = result.get("intent").get('displayName')
     if intent == 'topic_selected':
