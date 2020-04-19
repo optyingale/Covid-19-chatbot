@@ -29,7 +29,7 @@ class EmailSender:
             # converting DataFrame to HTML in body
             # body = "This will contain attachment"
             body = message.to_html()
-            body1 = "Source for World data : https://www.worldometers.info/coronavirus/" \
+            body1 = "Source for World data : https://www.worldometers.info/coronavirus/ " \
                     "Source for India data : https://api.covid19india.org/data.json"
 
             # attach the body with the msg instance
