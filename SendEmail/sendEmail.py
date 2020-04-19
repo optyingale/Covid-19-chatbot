@@ -80,11 +80,11 @@ class EmailSender:
 
             body = message
 
-            body = body.replace('cust_name',cust_name)
-            body = body.replace('cust_contact', cust_contact)
+            body = body.replace('cust_name', cust_name)
+            body = body.replace('cust_contact', str(cust_contact))
             body = body.replace('cust_email', cust_email)
             body = body.replace('course_name', topic_selected)
-            body = body.replace('cust_pincode', cust_pincode)
+            body = body.replace('cust_pincode', str(cust_pincode))
 
             # attach the body with the msg instance
             self.msg.attach(MIMEText(body, 'html'))
