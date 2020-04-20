@@ -48,6 +48,7 @@ def processRequest(req):
     #print(cust_name)
     cust_contact = parameters.get("cust_mob")                 # Customer Contact
     cust_email = parameters.get("cust_email")                 # Customer Email
+    cust_email = cust_email.lower()                           # Just in case people accessing from phone mistype
     cust_pincode = parameters.get("cust_pincode")             # Customer Pincode
     topic_selected = parameters.get("topic_selected")         # Topic Selected
 
@@ -58,14 +59,17 @@ def processRequest(req):
         template = template_reader.TemplateReader()
 
         email_message = template.read_course_template(topic_selected)
-        email_sender.send_email_to_user(cust_email, email_message)
+        email_sender.send_email_to_user(cust_email, email_message[0])
         email_file_support = open("email_templates/send_to_mom_template.html", "r")
         email_message_support = email_file_support.read()
         email_sender.send_email_to_support(cust_name=cust_name, cust_contact=cust_contact, cust_pincode=cust_pincode,
                                            cust_email=cust_email, topic_selected=topic_selected,
                                            message=email_message_support)
-        fulfillmentText = "Thank you for your interest" \
-                          "You will shortly receive a mail with the details" \
+        fulfillmentText = "Thank you for your interest " \
+                          "-------------------" \
+                          f"{email_message[1]}" \
+                          "-------------------" \
+                          "You will shortly receive a mail with the details " \
                           "Do you have any queries regarding coronavirus or COVID-19 ?"
         log.write_log(sessionID, "Bot Says: "+fulfillmentText)
         return {

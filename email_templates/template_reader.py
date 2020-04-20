@@ -25,6 +25,8 @@ class TemplateReader:
                 df['recovery_rate (in percentage)'] = df['recovered'].apply(int) / (
                             df['deaths'].apply(int) + df['recovered'].apply(int))
                 df['recovery_rate (in percentage)'] = (df['recovery_rate (in percentage)']*100).round(2)
+                df[self.list_of_columns].fillna(0)
+                text = df.iloc[0, :].to_string()
 
             elif topic_selected == 'Worldwide' or topic_selected == '2':
                 # World DataFrame
@@ -32,11 +34,14 @@ class TemplateReader:
                 table = soup.find(name="table")
                 df = pd.read_html(str(table))[0]
                 self.list_of_columns = ['Country,Other', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths',
-                                        'TotalRecovered', 'ActiveCases', 'Serious,Critical', 'Recovery_Rate (in percentage)']
+                                        'TotalRecovered', 'ActiveCases',
+                                        'Serious,Critical', 'Recovery_Rate (in percentage)']
                 df['Recovery_Rate (in percentage)'] = (
                             (df['TotalRecovered'] / (df['TotalDeaths'] + df['TotalRecovered'])) * 100).round(2)
+                df = df[self.list_of_columns].fillna(0)
+                text = df.iloc[0, :].to_string()
 
-            return df[self.list_of_columns].fillna(0)
+            return [df, text]
 
         except Exception as e:
             print('The exception is '+str(e))

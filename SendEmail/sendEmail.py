@@ -21,7 +21,7 @@ class EmailSender:
             self.msg['From'] = self.configuration['SENDER_EMAIL']
 
             # storing the receivers email address
-            self.msg['To'] = ",".join(recepient_email)
+            self.msg['To'] = recepient_email
 
             # storing the subject
             self.msg['Subject'] = self.configuration['EMAIL_SUBJECT']
