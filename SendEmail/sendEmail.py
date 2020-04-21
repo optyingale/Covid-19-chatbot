@@ -4,7 +4,6 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from config_reader import ConfigReader
 from email.mime.image import MIMEImage
-from email import encoders
 
 from Visualization.visualization import GenerateGraph
 
@@ -64,7 +63,7 @@ class EmailSender:
             # self.text = self.msg.as_string()
 
             # sending the mail
-            self.smtp.send_message(msg)
+            self.smtp.send_message(self.msg)
 
             # terminating the session
             self.smtp.quit()

@@ -13,6 +13,7 @@ app = Flask(__name__)
 def homepage():
     return 'Welcome, why are you here'
 
+
 # geting and sending response to dialogflow
 @app.route('/webhook', methods=['POST'])
 @cross_origin()
