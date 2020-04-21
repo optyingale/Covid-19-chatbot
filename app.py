@@ -1,5 +1,4 @@
 from flask import Flask, request, make_response, render_template
-import pandas as pd
 import json
 import os
 from flask_cors import cross_origin
@@ -58,8 +57,12 @@ def processRequest(req):
         email_sender = EmailSender()
         template = template_reader.TemplateReader()
 
+        # Getting DataFrame and string from template_reader
         email_message = template.read_course_template(topic_selected)
+
+        # Sending DataFrame to cust_email
         email_sender.send_email_to_user(cust_email, email_message[0])
+
         email_file_support = open("email_templates/send_to_mom_template.html", "r")
         email_message_support = email_file_support.read()
         email_sender.send_email_to_support(cust_name=cust_name, cust_contact=cust_contact, cust_pincode=cust_pincode,

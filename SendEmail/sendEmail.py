@@ -1,16 +1,22 @@
-import pandas as pd
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from config_reader import ConfigReader
-# import email_templates
+from email.mime.image import MIMEImage
+from email import encoders
+
+from Visualization.visualization import GenerateGraph
 
 
 class EmailSender:
 
     def send_email_to_user(self, recepient_email, message):
         try:
+
+            generate = GenerateGraph()
+            generate.india_or_worldwide(message)
+
             self.config_reader = ConfigReader()
             self.configuration = self.config_reader.read_config()
 
@@ -35,6 +41,11 @@ class EmailSender:
             # attach the body with the msg instance
             self.msg.attach(MIMEText(body, 'html'))
             self.msg.attach(MIMEText(body1, 'plain'))
+            self.msg.attach(MIMEImage(open('../Visualization/Active.png', 'rb').read()))
+            self.msg.attach(MIMEImage(open('../Visualization/Confirmed.png', 'rb').read()))
+            self.msg.attach(MIMEImage(open('../Visualization/Deceased.png', 'rb').read()))
+            self.msg.attach(MIMEImage(open('../Visualization/Recovered.png', 'rb').read()))
+            self.msg.attach(MIMEImage(open('../Visualization/Pie_chart.png', 'rb').read()))
 
             # instance of MIMEBase and named as p
             self.p = MIMEBase('application', 'octet-stream')
@@ -49,10 +60,11 @@ class EmailSender:
             self.smtp.login(self.msg['From'], self.configuration['PASSWORD'])
 
             # Converts the Multipart msg into a string
-            self.text = self.msg.as_string()
+            # No need to do this
+            # self.text = self.msg.as_string()
 
             # sending the mail
-            self.smtp.sendmail(self.msg['From'], recepient_email, self.text)
+            self.smtp.send_message(msg)
 
             # terminating the session
             self.smtp.quit()

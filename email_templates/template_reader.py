@@ -16,7 +16,7 @@ class TemplateReader:
 
     def read_course_template(self, topic_selected):
         try:
-            if topic_selected == 'India' or topic_selected == '1':
+            if topic_selected.lower() == 'india' or topic_selected == '1':
                 data = json.loads(r1.content)
                 df = (pd.DataFrame(data['statewise'])[['state', 'active', 'confirmed', 'deaths',
                                                        'recovered', 'lastupdatedtime']].set_index('state'))
@@ -28,7 +28,7 @@ class TemplateReader:
                 df[self.list_of_columns].fillna(0)
                 text = df.iloc[0, :].to_string()
 
-            elif topic_selected == 'Worldwide' or topic_selected == '2':
+            elif topic_selected.lower() == 'worldwide' or topic_selected == '2' :
                 # World DataFrame
                 soup = BeautifulSoup(r.content, 'lxml')
                 table = soup.find(name="table")
@@ -39,6 +39,7 @@ class TemplateReader:
                 df['Recovery_Rate (in percentage)'] = (
                             (df['TotalRecovered'] / (df['TotalDeaths'] + df['TotalRecovered'])) * 100).round(2)
                 df = df[self.list_of_columns].fillna(0)
+                df.set_index('Country,Other', inplace=True, )
                 text = df.iloc[0, :].to_string()
 
             return [df, text]
