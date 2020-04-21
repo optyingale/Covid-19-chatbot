@@ -1,3 +1,4 @@
+geopandas
 click==7.1.1
 cycler==0.10.0
 Flask==1.1.2
