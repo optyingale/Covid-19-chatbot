@@ -1,4 +1,5 @@
 wheel==0.34
+gunicorn
 pipwin==0.4.9
 git+git://github.com/geopandas/geopandas.git
 git+git://github.com/Toblerity/rtree.git
