@@ -12,7 +12,8 @@ cycler==0.10.0
 Fiona==1.8.4
 Flask==1.1.2
 Flask-Cors==3.0.8
-./gdal/Fiona-1.8.13-cp38-cp38-win32.whl
+./gdal/Fiona-1.8.13-cp36-cp36m-win32.whl
+./gdal/GDAL-2.4.1-cp36-cp36m-win32.whl
 GDAL==2.3.3
 geopandas==0.6.1
 idna==2.9
