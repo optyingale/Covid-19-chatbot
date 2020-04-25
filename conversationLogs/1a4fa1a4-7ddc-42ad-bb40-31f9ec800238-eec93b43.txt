@@ -285,3 +285,10 @@ TotalRecovered                    832876
 ActiveCases                      1877731
 Serious,Critical                   58178
 Recovery_Rate (in percentage)      80.41-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/04:43:26		User Says: 411040
+2020-04-26/04:43:54		Bot Says: Thank you for your interest -------------------active                                         19519
+confirmed                                      26283
+deaths                                           825
+recovered                                       5939
+lastupdatedtime                  25/04/2020 23:22:37
+recovery_rate (in percentage)                   87.8-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
