@@ -37,6 +37,8 @@ def webhook():
 def processRequest(req):
     log = logger.Log()
 
+    print(type(req))
+
     sessionID = req.get('responseId')
 
     result = req.get("queryResult")
