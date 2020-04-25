@@ -30,7 +30,7 @@ class TemplateReader:
 
             elif topic_selected.lower() == 'worldwide' or topic_selected == '2':
                 # World DataFrame
-                soup = BeautifulSoup(r.content, 'lxml')
+                soup = BeautifulSoup(r.content, 'html.parser')
                 table = soup.find(name="table")
                 df = pd.read_html(str(table))[0]
                 self.list_of_columns = ['Country,Other', 'TotalCases', 'NewCases', 'TotalDeaths', 'NewDeaths',
