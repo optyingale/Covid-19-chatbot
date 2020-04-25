@@ -5,6 +5,8 @@ from email.mime.base import MIMEBase
 from config_reader import ConfigReader
 from email.mime.image import MIMEImage
 
+import os
+
 from Visualization.visualization import GenerateGraph
 
 
@@ -40,11 +42,14 @@ class EmailSender:
             # attach the body with the msg instance
             self.msg.attach(MIMEText(body, 'html'))
             self.msg.attach(MIMEText(body1, 'plain'))
-            self.msg.attach(MIMEImage(open('./Visualization/Active.png', 'rb').read()))
-            self.msg.attach(MIMEImage(open('./Visualization/Confirmed.png', 'rb').read()))
-            self.msg.attach(MIMEImage(open('./Visualization/Deceased.png', 'rb').read()))
-            self.msg.attach(MIMEImage(open('./Visualization/Recovered.png', 'rb').read()))
-            self.msg.attach(MIMEImage(open('./Visualization/Pie_chart.png', 'rb').read()))
+
+            img_location = './Images/'
+
+            for file in os.listdir(img_location):
+                with open(img_location + file, 'rb') as fp:
+                    img = MIMEImage(fp.read())
+                img.add_header('Content-Disposition', "attachment; filename= %s" % file)
+                self.msg.attach(img)
 
             # instance of MIMEBase and named as p
             self.p = MIMEBase('application', 'octet-stream')

@@ -28,7 +28,7 @@ class TemplateReader:
                 df[self.list_of_columns].fillna(0)
                 text = df.iloc[0, :].to_string()
 
-            elif topic_selected.lower() == 'worldwide' or topic_selected == '2' :
+            elif topic_selected.lower() == 'worldwide' or topic_selected == '2':
                 # World DataFrame
                 soup = BeautifulSoup(r.content, 'lxml')
                 table = soup.find(name="table")
@@ -40,6 +40,7 @@ class TemplateReader:
                             (df['TotalRecovered'] / (df['TotalDeaths'] + df['TotalRecovered'])) * 100).round(2)
                 df = df[self.list_of_columns].fillna(0)
                 df.set_index('Country,Other', inplace=True, )
+                df.sort_values(by='TotalCases', ascending=False, inplace=True)
                 text = df.iloc[0, :].to_string()
 
             return [df, text]
