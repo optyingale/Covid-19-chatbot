@@ -49,7 +49,7 @@ def processRequest(req):
     cust_contact = parameters.get("cust_mob")                 # Customer Contact
     cust_email = parameters.get("cust_email")                 # Customer Email
     cust_email = cust_email.lower()                           # Just in case people accessing from phone mistype
-    cust_pincode = parameters.get("cust_pincode")             # Customer Pincode
+    cust_pincode = 0  # parameters.get("cust_pincode")        # Customer Pincode
     topic_selected = parameters.get("topic_selected")         # Topic Selected
 
     intent = result.get("intent").get('displayName')
