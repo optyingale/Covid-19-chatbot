@@ -301,3 +301,127 @@ TotalRecovered                    834410
 ActiveCases                      1877808
 Serious,Critical                   58178
 Recovery_Rate (in percentage)      80.43-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:22:36		User Says: 411040
+2020-04-26/05:23:05		Bot Says: Thank you for your interest -------------------active                                         19519
+confirmed                                      26283
+deaths                                           825
+recovered                                       5939
+lastupdatedtime                  25/04/2020 23:22:37
+recovery_rate (in percentage)                   87.8-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:23:32		User Says: 411040
+2020-04-26/05:24:04		Bot Says: Thank you for your interest -------------------TotalCases                       2915679
+NewCases                         +86,853
+TotalDeaths                       203043
+NewDeaths                         +5,944
+TotalRecovered                    834525
+ActiveCases                      1878111
+Serious,Critical                   58178
+Recovery_Rate (in percentage)      80.43-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:24:54		User Says: 411040
+2020-04-26/05:25:19		Bot Says: Thank you for your interest -------------------active                                         19519
+confirmed                                      26283
+deaths                                           825
+recovered                                       5939
+lastupdatedtime                  25/04/2020 23:22:37
+recovery_rate (in percentage)                   87.8-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:26:31		User Says: 411040
+2020-04-26/05:26:55		Bot Says: Thank you for your interest -------------------active                                         19519
+confirmed                                      26283
+deaths                                           825
+recovered                                       5939
+lastupdatedtime                  25/04/2020 23:22:37
+recovery_rate (in percentage)                   87.8-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:27:04		User Says: 411040
+2020-04-26/05:27:32		Bot Says: Thank you for your interest -------------------TotalCases                       2917353
+NewCases                         +88,527
+TotalDeaths                       203111
+NewDeaths                         +6,012
+TotalRecovered                    834525
+ActiveCases                      1879717
+Serious,Critical                   58178
+Recovery_Rate (in percentage)      80.43-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:28:25		User Says: 411040
+2020-04-26/05:28:50		Bot Says: Thank you for your interest -------------------active                                         19519
+confirmed                                      26283
+deaths                                           825
+recovered                                       5939
+lastupdatedtime                  25/04/2020 23:22:37
+recovery_rate (in percentage)                   87.8-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:30:33		User Says: 411040
+2020-04-26/05:31:01		Bot Says: Thank you for your interest -------------------TotalCases                       2917552
+NewCases                         +88,726
+TotalDeaths                       203119
+NewDeaths                         +6,020
+TotalRecovered                    834525
+ActiveCases                      1879908
+Serious,Critical                   58178
+Recovery_Rate (in percentage)      80.42-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:31:10		User Says: 411040
+2020-04-26/05:31:36		Bot Says: Thank you for your interest -------------------active                                         19519
+confirmed                                      26283
+deaths                                           825
+recovered                                       5939
+lastupdatedtime                  25/04/2020 23:22:37
+recovery_rate (in percentage)                   87.8-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:32:02		User Says: 411040
+2020-04-26/05:32:33		Bot Says: Thank you for your interest -------------------TotalCases                       2917552
+NewCases                         +88,726
+TotalDeaths                       203119
+NewDeaths                         +6,020
+TotalRecovered                    834525
+ActiveCases                      1879908
+Serious,Critical                   58178
+Recovery_Rate (in percentage)      80.42-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:33:11		User Says: 411040
+2020-04-26/05:33:37		Bot Says: Thank you for your interest -------------------active                                         19519
+confirmed                                      26283
+deaths                                           825
+recovered                                       5939
+lastupdatedtime                  25/04/2020 23:22:37
+recovery_rate (in percentage)                   87.8-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:35:03		User Says: 411040
+2020-04-26/05:35:29		Bot Says: Thank you for your interest -------------------active                                         19519
+confirmed                                      26283
+deaths                                           825
+recovered                                       5939
+lastupdatedtime                  25/04/2020 23:22:37
+recovery_rate (in percentage)                   87.8-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:35:33		User Says: 411040
+2020-04-26/05:36:02		Bot Says: Thank you for your interest -------------------TotalCases                       2917974
+NewCases                         +89,148
+TotalDeaths                       203137
+NewDeaths                         +6,038
+TotalRecovered                    836486
+ActiveCases                      1878351
+Serious,Critical                   58178
+Recovery_Rate (in percentage)      80.46-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:36:08		User Says: 411040
+2020-04-26/05:36:33		Bot Says: Thank you for your interest -------------------active                                         19519
+confirmed                                      26283
+deaths                                           825
+recovered                                       5939
+lastupdatedtime                  25/04/2020 23:22:37
+recovery_rate (in percentage)                   87.8-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:37:44		User Says: 411040
+2020-04-26/05:38:09		Bot Says: Thank you for your interest -------------------active                                         19519
+confirmed                                      26283
+deaths                                           825
+recovered                                       5939
+lastupdatedtime                  25/04/2020 23:22:37
+recovery_rate (in percentage)                   87.8-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:39:12		User Says: 411040
+2020-04-26/05:39:39		Bot Says: Thank you for your interest -------------------TotalCases                       2917974
+NewCases                         +89,148
+TotalDeaths                       203137
+NewDeaths                         +6,038
+TotalRecovered                    836486
+ActiveCases                      1878351
+Serious,Critical                   58178
+Recovery_Rate (in percentage)      80.46-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?
+2020-04-26/05:39:46		User Says: 411040
+2020-04-26/05:40:11		Bot Says: Thank you for your interest -------------------active                                         19519
+confirmed                                      26283
+deaths                                           825
+recovered                                       5939
+lastupdatedtime                  25/04/2020 23:22:37
+recovery_rate (in percentage)                   87.8-------------------You will shortly receive a mail with the details Do you have any queries regarding coronavirus or COVID-19 ?

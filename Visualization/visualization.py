@@ -6,6 +6,8 @@ img_loc = './Images/'
 
 class GenerateGraph:
     def india_or_worldwide(self, df):
+        # Pre determining font size
+        plt.rcParams.update({'font.size': 23})
         try:
             if df.index.name == 'state':
 
@@ -63,9 +65,9 @@ class GenerateGraph:
                 plt.pie([recovered, deaths, active], labels=labels, )
                 central_circle = plt.Circle((0, 0), 0.5, color='white')
                 fig = plt.gcf()
-                plt.rc('font', size=30)
+                # plt.rc('font', size=17)
                 fig.gca().add_artist(central_circle)
-                plt.title('Total Confirmed, Recovered and Deceased Cases', fontsize=30)
+                plt.title('Total Confirmed, Recovered and Deceased Cases', fontsize=35)
                 plt.savefig(img_loc + 'Pie_chart.png')
 
                 self.status = 'done'
@@ -119,9 +121,9 @@ class GenerateGraph:
                 plt.pie([recovered, deaths, active], labels=labels, )
                 central_circle = plt.Circle((0, 0), 0.5, color='white')
                 fig = plt.gcf()
-                plt.rc('font', size=50)
+                # plt.rc('font', size=30)
                 fig.gca().add_artist(central_circle)
-                plt.title('Total Confirmed, Recovered and Deceased Cases', fontsize=25)
+                plt.title('Total Confirmed, Recovered and Deceased Cases', fontsize=30)
                 plt.savefig(img_loc + 'Pie_chart.png')
 
                 self.status = 'done'
